@@ -1,0 +1,83 @@
+html, body {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10rem;
+    background: white;
+    background: linear-gradient(156deg, white 0%, #132129 100%);
+}
+
+main {
+    background-color: white;
+    padding: 2rem;
+    padding-bottom: .7rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 30%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+input[type=text], input[type=password] {
+    border-radius: .3rem .5rem;
+    outline: none;
+    border: none;
+    width: 70%;
+    background-color: rgb(223, 223, 223);
+    padding-left: .3rem;
+}
+
+button[type=submit] {
+    background-color: #1E3340;
+    color: white;
+    border: none;
+    border-radius: .3rem .5rem;
+    padding: .5rem;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+button[type=submit]:hover {
+    background-color: #455b69;
+    color: white;
+    border: none;
+    border-radius: .3rem .5rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.troca {
+    display: flex;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    outline-color: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ja-login, .criar-login {
+    display: none;
+}

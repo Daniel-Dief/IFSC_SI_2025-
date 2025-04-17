@@ -11,10 +11,24 @@ interface Login {
     senha: string;
 }
 
+interface Mensagem {
+    login: string;
+    mensagem: string;
+    dataHora: string;
+}
+
 const loginDeUsuarios : Login[] = [
     {
         login: 'admin',
         senha: 'admin'
+    }
+]
+
+const mensagens: Mensagem[] = [
+    {
+        login: 'admin',
+        mensagem: 'Olá, tudo bem?',
+        dataHora: new Date().toISOString()
     }
 ]
 
@@ -56,6 +70,30 @@ app.post('/criar-login', (req, res) => {
     res.status(201).json({
         message: 'Usuário criado com sucesso'
     })
+});
+
+app.post('/mensagens', (req, res) => {
+    const { login, mensagem } = req.body;
+
+    if(!login || !mensagem) {
+        res.status(400).json({
+            message: 'Login ou mensagem inválidos'
+        });
+    }
+
+    mensagens.push({
+        login,
+        mensagem,
+        dataHora: new Date().toISOString()
+    });
+
+    res.status(201).json({
+        message: 'Mensagem criada com sucesso'
+    })
+})
+
+app.get('/mensagens', (req, res) => {
+    res.status(200).json(mensagens);
 });
 
 app.listen(port, () => {

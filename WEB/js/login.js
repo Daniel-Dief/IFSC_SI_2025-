@@ -25,11 +25,6 @@ form_criar.addEventListener("submit", (e) => {
     const login = data.get("login")
     const senha = data.get("senha")
     const confirmar_senha = data.get("confirmar-senha")
-    console.log(JSON.stringify({
-        login,
-        senha,
-        confirmar_senha
-    }))
     fetch(`${url}/criar-login`, {
         method: "POST",
         body: JSON.stringify({ login, senha, confirmar_senha }),
@@ -52,7 +47,6 @@ form_login.addEventListener("submit", (e) => {
     const data = new FormData(form_login)
     const login = data.get("login")
     const senha = data.get("senha")
-    console.log(JSON.stringify({ login, senha }))
     fetch(`${url}/login`, {
         method: "POST",
         body: JSON.stringify({ login, senha }),
@@ -61,7 +55,8 @@ form_login.addEventListener("submit", (e) => {
         }
     }).then(res => {
         if (res.status == 200) {
-            alert("Login efetuado com sucesso!")
+            localStorage.setItem("login", login)
+            window.location.href = "chat.html"
         } else {
             alert("Erro ao fazer login")
         }

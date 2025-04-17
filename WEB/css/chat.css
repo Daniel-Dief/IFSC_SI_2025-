@@ -1,0 +1,122 @@
+html, body {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10rem;
+    background: white;
+    background: linear-gradient(156deg, white 0%, #132129 100%);
+    overflow: hidden;
+}
+
+header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    background-color: white;
+    padding: 2rem;
+    padding-bottom: .7rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    height: 90%;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.send-form {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+input {
+    border-radius: .3rem .5rem;
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: rgb(223, 223, 223);
+    padding-left: .3rem;
+}
+
+button {
+    border: none;
+    color: white;
+    border-radius: .3rem .5rem;
+    padding: .5rem;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+button:hover {
+    border-color: #455b69;
+}
+
+img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.messages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    overflow-y: scroll;
+    gap: 1rem;
+}
+
+.mine {
+    align-self: flex-end;
+}
+
+.other {
+    align-self: flex-start;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    strong {
+        align-self: flex-start;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    span {
+        align-self: flex-start;
+        font-size: 1rem;
+        color: #555;
+    }
+}

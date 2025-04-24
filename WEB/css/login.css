@@ -87,3 +87,14 @@ button[type=submit]:hover {
 .ja-login, .criar-login {
     display: none;
 }
+
+@media (max-width: 768px) {
+    .field {
+        flex-direction: column;
+        align-items: flex-start;   
+    }
+
+    input[type=text], input[type=password] {
+        width: 100%;
+    }
+}
